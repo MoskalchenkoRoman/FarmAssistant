@@ -1,16 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.farmassistant.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.farmassistant.HelloController">
+   <children>
+      <Button fx:id="welcomeText" layoutX="303.0" layoutY="243.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="41.0" prefWidth="130.0" text="Рассчетать" textAlignment="CENTER" textFill="#e42611">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="154.0" layoutY="14.0" text="Рассчет себестоимости яиц на месяц" textAlignment="CENTER" textFill="#24b9d7">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="84.0" text="Сколько яиц в день собранно" />
+      <Label layoutX="50.0" layoutY="134.0" text="Расходы на  корма в месяц" />
+      <Label layoutX="50.0" layoutY="186.0" text="Дополнительные расходы на содержание" />
+      <TextField fx:id="numberOfEggs" layoutX="421.0" layoutY="80.0" promptText="сраднее за 3 дня" />
+      <TextField fx:id="price" layoutX="421.0" layoutY="130.0" promptText="рублей" />
+      <TextField fx:id="otherExpenses" layoutX="421.0" layoutY="182.0" promptText="рублей" />
+      <ImageView fx:id="fon4" fitHeight="136.0" fitWidth="236.0" layoutX="-194.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imges/chik.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="437.0" fitWidth="848.0" layoutX="-3.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imges/fon.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
